@@ -9,6 +9,8 @@ Env:
   GH_LOGIN          username GitHub
   STATS_TZ          zona waktu IANA untuk menentukan "hari ini" (default: UTC)
   STATS_LANG        en | id (default: en)
+  STATS_TAGLINE     kalimat di bawah nama (default: bio GitHub)
+  STATS_PRIVATE_LANGS  false = bahasa dari repo privat tidak dihitung (default: true)
   STATS_HIDE_LANGS  bahasa yang tidak ditampilkan, pisahkan koma, mis. "HTML,CSS"
 
 Jalankan dengan --demo untuk merender data contoh tanpa memanggil API.
@@ -35,7 +37,7 @@ LABELS = {
         contributions="Contributions", current="Current streak", longest="Longest streak",
         in_year="in {y}", all_time="all time", days="days", since_date="since {d}",
         activity="Activity · last 52 weeks", languages="Languages", repos="repos",
-        stars="stars", prs="pull requests", other="Other", contribs="contributions",
+        stars="stars", prs="pull requests", repo1="repo", star1="star", collab1="collab", collabs="collabs", pr1="pull request", other="Other", contribs="contributions",
         months=["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
         sep=",",
     ),
@@ -44,7 +46,7 @@ LABELS = {
         contributions="Kontribusi", current="Streak saat ini", longest="Streak terpanjang",
         in_year="tahun {y}", all_time="sepanjang waktu", days="hari", since_date="sejak {d}",
         activity="Aktivitas · 52 minggu terakhir", languages="Bahasa", repos="repo",
-        stars="bintang", prs="pull request", other="Lainnya", contribs="kontribusi",
+        stars="bintang", prs="pull request", repo1="repo", star1="bintang", collab1="kolaborasi", collabs="kolaborasi", pr1="pull request", other="Lainnya", contribs="kontribusi",
         months=["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agu", "Sep", "Okt", "Nov", "Des"],
         sep=".",
     ),
@@ -64,13 +66,14 @@ SHADES = [1.0, 0.72, 0.5, 0.34, 0.22, 0.12]
 USER_Q = """
 query($login: String!, $cursor: String) {
   user(login: $login) {
-    name login createdAt
+    name login createdAt bio
     pullRequests { totalCount }
+    collab: repositories(ownerAffiliations: [COLLABORATOR, ORGANIZATION_MEMBER], isFork: false) { totalCount }
     repositories(ownerAffiliations: [OWNER], isFork: false, first: 100, after: $cursor) {
       totalCount
       pageInfo { hasNextPage endCursor }
       nodes {
-        stargazerCount
+        stargazerCount isPrivate
         languages(first: 10, orderBy: {field: SIZE, direction: DESC}) {
           edges { size node { name } }
         }
@@ -101,6 +104,7 @@ def iso(t: dt.datetime) -> str:
 
 def fetch(login: str, token: str, today: dt.date) -> dict:
     profile, cursor, stars, repos_total = None, None, 0, 0
+    private_langs = os.environ.get("STATS_PRIVATE_LANGS", "true").lower() != "false"
     langs: dict[str, int] = defaultdict(int)
     while True:
         u = gql(USER_Q, {"login": login, "cursor": cursor}, token)["user"]
@@ -111,6 +115,8 @@ def fetch(login: str, token: str, today: dt.date) -> dict:
         repos_total = repos["totalCount"]
         for n in repos["nodes"]:
             stars += n["stargazerCount"]
+            if n["isPrivate"] and not private_langs:
+                continue
             for e in n["languages"]["edges"]:
                 langs[e["node"]["name"]] += e["size"]
         if not repos["pageInfo"]["hasNextPage"]:
@@ -149,7 +155,8 @@ def fetch(login: str, token: str, today: dt.date) -> dict:
 
     return dict(
         name=profile["name"] or profile["login"], login=profile["login"],
-        since=created.year, repos=repos_total, stars=stars,
+        bio=(profile.get("bio") or "").strip(),
+        since=created.year, repos=repos_total, collabs=profile["collab"]["totalCount"], stars=stars,
         prs=profile["pullRequests"]["totalCount"],
         commits_year=commits_by_year.get(today.year, 0),
         total=total, days=days, langs=dict(langs),
@@ -166,7 +173,7 @@ def demo(today: dt.date) -> dict:
     for k in range(17):  # streak yang sedang berjalan
         days[today - dt.timedelta(days=k)] = max(days[today - dt.timedelta(days=k)], 2)
     return dict(
-        name="Nama Kamu", login="username", since=2019, repos=24, stars=138, prs=61,
+        name="Nama Kamu", login="username", since=2019, bio="Building quiet, useful things for the web", collabs=5, repos=24, stars=138, prs=61,
         commits_year=1284, total=sum(days.values()) + 812, days=days,
         langs={"TypeScript": 520_000, "PHP": 210_000, "Python": 140_000,
                "Go": 60_000, "Shell": 22_000, "Dockerfile": 9_000},
@@ -251,19 +258,23 @@ def render(s: dict, theme: str, L: dict, today: dt.date, hide: set[str]) -> str:
     a("<style>"
       f".serif{{font-family:{SERIF};}} .sans{{font-family:{SANS};}}"
       f".ink{{fill:{c['ink']};}} .muted{{fill:{c['muted']};}}"
+      f".num{{font-family:{SANS};font-weight:300;font-variant-numeric:lining-nums tabular-nums;letter-spacing:-1px;}}"
       f".cap{{font-family:{SANS};font-size:10.5px;font-weight:600;letter-spacing:1.6px;fill:{c['muted']};}}"
       "</style>")
     a(f'<rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="12" fill="{c["bg"]}" stroke="{c["line"]}"/>')
 
     # header
+    tagline = os.environ.get("STATS_TAGLINE", "").strip() or s.get("bio", "")
     a(f'<text x="{P}" y="60" class="serif ink" font-size="25">{escape(s["name"])}</text>')
-    a(f'<text x="{P}" y="83" class="sans muted" font-size="12.5">@{escape(s["login"])} · '
-      f'{L["since"]} {s["since"]}</text>')
-    a(f'<text x="{W - P}" y="60" class="sans muted" font-size="11.5" text-anchor="end">'
-      f'{L["updated"]} {date_txt(today, L, True)}</text>')
-    a(f'<text x="{W - P}" y="83" class="sans muted" font-size="12.5" text-anchor="end">'
-      f'{num(s["repos"], L)} {L["repos"]} · {num(s["stars"], L)} {L["stars"]} · '
-      f'{num(s["prs"], L)} {L["prs"]}</text>')
+    if tagline:
+        a(f'<text x="{P}" y="84" class="sans muted" font-size="12.5">{escape(tagline)}</text>')
+    a(f'<text x="{W - P}" y="60" class="sans muted" font-size="12.5" text-anchor="end">'
+      f'@{escape(s["login"])} · {L["since"]} {s["since"]}</text>')
+    facts = [(s["repos"], L["repo1"], L["repos"]), (s.get("collabs", 0), L["collab1"], L["collabs"]),
+             (s["stars"], L["star1"], L["stars"]),
+             (s["prs"], L["pr1"], L["prs"])]
+    facts_txt = " · ".join(f"{num(n, L)} {one if n == 1 else many}" for n, one, many in facts if n)
+    a(f'<text x="{W - P}" y="84" class="sans muted" font-size="12.5" text-anchor="end">{facts_txt}</text>')
     a(f'<line x1="{P}" y1="106.5" x2="{W - P}" y2="106.5" stroke="{c["line"]}"/>')
 
     # metrics
@@ -285,7 +296,7 @@ def render(s: dict, theme: str, L: dict, today: dt.date, hide: set[str]) -> str:
         if i:
             a(f'<line x1="{P + i * col:.1f}" y1="128" x2="{P + i * col:.1f}" y2="208" stroke="{c["line"]}"/>')
         a(f'<text x="{x:.1f}" y="139" class="cap">{escape(label.upper())}</text>')
-        a(f'<text x="{x:.1f}" y="183" class="serif ink" font-size="36">{value}</text>')
+        a(f'<text x="{x:.1f}" y="183" class="num ink" font-size="36">{value}</text>')
         a(f'<text x="{x:.1f}" y="205" class="sans muted" font-size="11.5">{escape(sub)}</text>')
     a(f'<line x1="{P}" y1="230.5" x2="{W - P}" y2="230.5" stroke="{c["line"]}"/>')
 
