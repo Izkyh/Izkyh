@@ -1,26 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="840" height="352" viewBox="0 0 840 352" role="img" aria-labelledby="title">
 <title id="title">GitHub stats — Izkyh</title>
-<style>.serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;} .sans{font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;}.ink{fill:#1f2328;} .muted{fill:#656d76;}.cap{font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:10.5px;font-weight:600;letter-spacing:1.6px;fill:#656d76;}</style>
+<style>.serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;} .sans{font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;}.ink{fill:#1f2328;} .muted{fill:#656d76;}.num{font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:300;font-variant-numeric:lining-nums tabular-nums;letter-spacing:-1px;}.cap{font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:10.5px;font-weight:600;letter-spacing:1.6px;fill:#656d76;}</style>
 <rect x="0.5" y="0.5" width="839" height="351" rx="12" fill="#ffffff" stroke="#d0d7de"/>
 <text x="36" y="60" class="serif ink" font-size="25">Rizky Hidayatullah</text>
-<text x="36" y="83" class="sans muted" font-size="12.5">@Izkyh · on GitHub since 2021</text>
-<text x="804" y="60" class="sans muted" font-size="11.5" text-anchor="end">Updated 2 Nov 2026</text>
-<text x="804" y="83" class="sans muted" font-size="12.5" text-anchor="end">4 repos · 1 stars · 0 pull requests</text>
+<text x="804" y="60" class="sans muted" font-size="12.5" text-anchor="end">@Izkyh · on GitHub since 2021</text>
+<text x="804" y="84" class="sans muted" font-size="12.5" text-anchor="end">4 repos · 3 collabs · 1 star</text>
 <line x1="36" y1="106.5" x2="804" y2="106.5" stroke="#d0d7de"/>
 <text x="36.0" y="139" class="cap">COMMITS</text>
-<text x="36.0" y="183" class="serif ink" font-size="36">3</text>
+<text x="36.0" y="183" class="num ink" font-size="36">3</text>
 <text x="36.0" y="205" class="sans muted" font-size="11.5">in 2026</text>
 <line x1="228.0" y1="128" x2="228.0" y2="208" stroke="#d0d7de"/>
 <text x="250.0" y="139" class="cap">CONTRIBUTIONS</text>
-<text x="250.0" y="183" class="serif ink" font-size="36">688</text>
+<text x="250.0" y="183" class="num ink" font-size="36">688</text>
 <text x="250.0" y="205" class="sans muted" font-size="11.5">all time</text>
 <line x1="420.0" y1="128" x2="420.0" y2="208" stroke="#d0d7de"/>
 <text x="442.0" y="139" class="cap">CURRENT STREAK</text>
-<text x="442.0" y="183" class="serif ink" font-size="36">1</text>
+<text x="442.0" y="183" class="num ink" font-size="36">1</text>
 <text x="442.0" y="205" class="sans muted" font-size="11.5">days · since 1 Nov</text>
 <line x1="612.0" y1="128" x2="612.0" y2="208" stroke="#d0d7de"/>
 <text x="634.0" y="139" class="cap">LONGEST STREAK</text>
-<text x="634.0" y="183" class="serif ink" font-size="36">17</text>
+<text x="634.0" y="183" class="num ink" font-size="36">17</text>
 <text x="634.0" y="205" class="sans muted" font-size="11.5">days · 14 Oct – 30 Oct 2026</text>
 <line x1="36" y1="230.5" x2="804" y2="230.5" stroke="#d0d7de"/>
 <text x="36" y="260" class="cap">ACTIVITY · LAST 52 WEEKS</text>
@@ -34,10 +33,10 @@
 <text x="532" y="260" class="cap">LANGUAGES</text>
 <clipPath id="bar"><rect x="532" y="272" width="272" height="6" rx="3"/></clipPath>
 <g clip-path="url(#bar)">
-<rect x="532.0" y="272" width="109.3" height="6" fill="#1f2328" fill-opacity="1.0"/>
-<rect x="643.3" y="272" width="105.5" height="6" fill="#1f2328" fill-opacity="0.72"/>
-<rect x="750.8" y="272" width="24.0" height="6" fill="#1f2328" fill-opacity="0.5"/>
-<rect x="776.8" y="272" width="17.2" height="6" fill="#1f2328" fill-opacity="0.34"/>
+<rect x="532.0" y="272" width="108.8" height="6" fill="#1f2328" fill-opacity="1.0"/>
+<rect x="642.8" y="272" width="106.2" height="6" fill="#1f2328" fill-opacity="0.72"/>
+<rect x="751.1" y="272" width="23.9" height="6" fill="#1f2328" fill-opacity="0.5"/>
+<rect x="777.0" y="272" width="17.1" height="6" fill="#1f2328" fill-opacity="0.34"/>
 <rect x="796.1" y="272" width="5.9" height="6" fill="#1f2328" fill-opacity="0.22"/>
 </g>
 <circle cx="535.5" cy="295" r="3.5" fill="#1f2328" fill-opacity="1.0"/>
