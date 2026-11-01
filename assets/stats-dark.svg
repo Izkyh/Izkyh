@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="352" viewBox="0 0 840 352" role="img" aria-labelledby="title">
+<title id="title">GitHub stats — username</title>
+<style>.serif{font-family:Georgia, 'Iowan Old Style', 'Times New Roman', serif;} .sans{font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;}.ink{fill:#e6edf3;} .muted{fill:#8d96a0;}.cap{font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:10.5px;font-weight:600;letter-spacing:1.6px;fill:#8d96a0;}</style>
+<rect x="0.5" y="0.5" width="839" height="351" rx="12" fill="#0d1117" stroke="#30363d"/>
+<text x="36" y="60" class="serif ink" font-size="25">Nama Kamu</text>
+<text x="36" y="83" class="sans muted" font-size="12.5">@username · on GitHub since 2019</text>
+<text x="804" y="60" class="sans muted" font-size="11.5" text-anchor="end">Updated 23 Oct 2026</text>
+<text x="804" y="83" class="sans muted" font-size="12.5" text-anchor="end">24 repos · 138 stars · 61 pull requests</text>
+<line x1="36" y1="106.5" x2="804" y2="106.5" stroke="#30363d"/>
+<text x="36.0" y="139" class="cap">COMMITS</text>
+<text x="36.0" y="183" class="serif ink" font-size="36">1,284</text>
+<text x="36.0" y="205" class="sans muted" font-size="11.5">in 2026</text>
+<line x1="228.0" y1="128" x2="228.0" y2="208" stroke="#30363d"/>
+<text x="250.0" y="139" class="cap">CONTRIBUTIONS</text>
+<text x="250.0" y="183" class="serif ink" font-size="36">3,633</text>
+<text x="250.0" y="205" class="sans muted" font-size="11.5">all time</text>
+<line x1="420.0" y1="128" x2="420.0" y2="208" stroke="#30363d"/>
+<text x="442.0" y="139" class="cap">CURRENT STREAK</text>
+<text x="442.0" y="183" class="serif ink" font-size="36">21</text>
+<text x="442.0" y="205" class="sans muted" font-size="11.5">days · since 3 Oct</text>
+<line x1="612.0" y1="128" x2="612.0" y2="208" stroke="#30363d"/>
+<text x="634.0" y="139" class="cap">LONGEST STREAK</text>
+<text x="634.0" y="183" class="serif ink" font-size="36">31</text>
+<text x="634.0" y="205" class="sans muted" font-size="11.5">days · 21 Apr – 21 May 2026</text>
+<line x1="36" y1="230.5" x2="804" y2="230.5" stroke="#30363d"/>
+<text x="36" y="260" class="cap">ACTIVITY · LAST 52 WEEKS</text>
+<text x="476" y="260" class="sans muted" font-size="11.5" text-anchor="end">1,155 contributions</text>
+<line x1="36" y1="314.5" x2="476" y2="314.5" stroke="#21262d"/>
+<path d="M36.0,292.9 C40.3,292.9 40.3,302.2 44.6,302.2 C48.9,302.2 48.9,292.0 53.3,292.0 C57.6,292.0 57.6,290.4 61.9,290.4 C66.2,290.4 66.2,298.8 70.5,298.8 C74.8,298.8 74.8,300.5 79.1,300.5 C83.5,300.5 83.5,295.4 87.8,295.4 C92.1,295.4 92.1,292.9 96.4,292.9 C100.7,292.9 100.7,306.4 105.0,306.4 C109.3,306.4 109.3,298.8 113.6,298.8 C118.0,298.8 118.0,305.6 122.3,305.6 C126.6,305.6 126.6,302.2 130.9,302.2 C135.2,302.2 135.2,306.4 139.5,306.4 C143.8,306.4 143.8,301.3 148.2,301.3 C152.5,301.3 152.5,285.3 156.8,285.3 C161.1,285.3 161.1,290.4 165.4,290.4 C169.7,290.4 169.7,279.4 174.0,279.4 C178.4,279.4 178.4,296.3 182.7,296.3 C187.0,296.3 187.0,276.0 191.3,276.0 C195.6,276.0 195.6,313.2 199.9,313.2 C204.2,313.2 204.2,306.4 208.5,306.4 C212.9,306.4 212.9,292.9 217.2,292.9 C221.5,292.9 221.5,299.6 225.8,299.6 C230.1,299.6 230.1,296.3 234.4,296.3 C238.7,296.3 238.7,303.0 243.1,303.0 C247.4,303.0 247.4,282.8 251.7,282.8 C256.0,282.8 256.0,294.6 260.3,294.6 C264.6,294.6 264.6,290.4 268.9,290.4 C273.3,290.4 273.3,281.1 277.6,281.1 C281.9,281.1 281.9,298.8 286.2,298.8 C290.5,298.8 290.5,287.0 294.8,287.0 C299.1,287.0 299.1,292.9 303.5,292.9 C307.8,292.9 307.8,295.4 312.1,295.4 C316.4,295.4 316.4,308.1 320.7,308.1 C325.0,308.1 325.0,303.0 329.3,303.0 C333.6,303.0 333.6,298.0 338.0,298.0 C342.3,298.0 342.3,289.5 346.6,289.5 C350.9,289.5 350.9,297.1 355.2,297.1 C359.5,297.1 359.5,286.1 363.8,286.1 C368.2,286.1 368.2,284.4 372.5,284.4 C376.8,284.4 376.8,298.8 381.1,298.8 C385.4,298.8 385.4,295.4 389.7,295.4 C394.0,295.4 394.0,297.1 398.4,297.1 C402.7,297.1 402.7,303.9 407.0,303.9 C411.3,303.9 411.3,291.2 415.6,291.2 C419.9,291.2 419.9,301.3 424.2,301.3 C428.5,301.3 428.5,305.6 432.9,305.6 C437.2,305.6 437.2,292.9 441.5,292.9 C445.8,292.9 445.8,287.8 450.1,287.8 C454.4,287.8 454.4,285.3 458.7,285.3 C463.1,285.3 463.1,287.8 467.4,287.8 C471.7,287.8 471.7,292.0 476.0,292.0 L476,314 L36,314 Z" fill="#e6edf3" fill-opacity="0.06"/>
+<path d="M36.0,292.9 C40.3,292.9 40.3,302.2 44.6,302.2 C48.9,302.2 48.9,292.0 53.3,292.0 C57.6,292.0 57.6,290.4 61.9,290.4 C66.2,290.4 66.2,298.8 70.5,298.8 C74.8,298.8 74.8,300.5 79.1,300.5 C83.5,300.5 83.5,295.4 87.8,295.4 C92.1,295.4 92.1,292.9 96.4,292.9 C100.7,292.9 100.7,306.4 105.0,306.4 C109.3,306.4 109.3,298.8 113.6,298.8 C118.0,298.8 118.0,305.6 122.3,305.6 C126.6,305.6 126.6,302.2 130.9,302.2 C135.2,302.2 135.2,306.4 139.5,306.4 C143.8,306.4 143.8,301.3 148.2,301.3 C152.5,301.3 152.5,285.3 156.8,285.3 C161.1,285.3 161.1,290.4 165.4,290.4 C169.7,290.4 169.7,279.4 174.0,279.4 C178.4,279.4 178.4,296.3 182.7,296.3 C187.0,296.3 187.0,276.0 191.3,276.0 C195.6,276.0 195.6,313.2 199.9,313.2 C204.2,313.2 204.2,306.4 208.5,306.4 C212.9,306.4 212.9,292.9 217.2,292.9 C221.5,292.9 221.5,299.6 225.8,299.6 C230.1,299.6 230.1,296.3 234.4,296.3 C238.7,296.3 238.7,303.0 243.1,303.0 C247.4,303.0 247.4,282.8 251.7,282.8 C256.0,282.8 256.0,294.6 260.3,294.6 C264.6,294.6 264.6,290.4 268.9,290.4 C273.3,290.4 273.3,281.1 277.6,281.1 C281.9,281.1 281.9,298.8 286.2,298.8 C290.5,298.8 290.5,287.0 294.8,287.0 C299.1,287.0 299.1,292.9 303.5,292.9 C307.8,292.9 307.8,295.4 312.1,295.4 C316.4,295.4 316.4,308.1 320.7,308.1 C325.0,308.1 325.0,303.0 329.3,303.0 C333.6,303.0 333.6,298.0 338.0,298.0 C342.3,298.0 342.3,289.5 346.6,289.5 C350.9,289.5 350.9,297.1 355.2,297.1 C359.5,297.1 359.5,286.1 363.8,286.1 C368.2,286.1 368.2,284.4 372.5,284.4 C376.8,284.4 376.8,298.8 381.1,298.8 C385.4,298.8 385.4,295.4 389.7,295.4 C394.0,295.4 394.0,297.1 398.4,297.1 C402.7,297.1 402.7,303.9 407.0,303.9 C411.3,303.9 411.3,291.2 415.6,291.2 C419.9,291.2 419.9,301.3 424.2,301.3 C428.5,301.3 428.5,305.6 432.9,305.6 C437.2,305.6 437.2,292.9 441.5,292.9 C445.8,292.9 445.8,287.8 450.1,287.8 C454.4,287.8 454.4,285.3 458.7,285.3 C463.1,285.3 463.1,287.8 467.4,287.8 C471.7,287.8 471.7,292.0 476.0,292.0" fill="none" stroke="#e6edf3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="476.0" cy="292.0" r="3" fill="#0d1117" stroke="#e6edf3" stroke-width="1.6"/>
+<text x="36" y="334" class="sans muted" font-size="10.5">25 Oct 2025</text>
+<text x="476" y="334" class="sans muted" font-size="10.5" text-anchor="end">23 Oct 2026</text>
+<text x="532" y="260" class="cap">LANGUAGES</text>
+<clipPath id="bar"><rect x="532" y="272" width="272" height="6" rx="3"/></clipPath>
+<g clip-path="url(#bar)">
+<rect x="532.0" y="272" width="145.2" height="6" fill="#e6edf3" fill-opacity="1.0"/>
+<rect x="679.2" y="272" width="57.4" height="6" fill="#e6edf3" fill-opacity="0.72"/>
+<rect x="738.6" y="272" width="37.6" height="6" fill="#e6edf3" fill-opacity="0.5"/>
+<rect x="778.2" y="272" width="15.0" height="6" fill="#e6edf3" fill-opacity="0.34"/>
+<rect x="795.2" y="272" width="4.2" height="6" fill="#e6edf3" fill-opacity="0.22"/>
+<rect x="801.5" y="272" width="1.0" height="6" fill="#e6edf3" fill-opacity="0.12"/>
+</g>
+<circle cx="535.5" cy="295" r="3.5" fill="#e6edf3" fill-opacity="1.0"/>
+<text x="545.0" y="299" class="sans ink" font-size="12">TypeScript</text>
+<text x="658.0" y="299" class="sans muted" font-size="12" text-anchor="end">54%</text>
+<circle cx="535.5" cy="313" r="3.5" fill="#e6edf3" fill-opacity="0.72"/>
+<text x="545.0" y="317" class="sans ink" font-size="12">PHP</text>
+<text x="658.0" y="317" class="sans muted" font-size="12" text-anchor="end">22%</text>
+<circle cx="535.5" cy="331" r="3.5" fill="#e6edf3" fill-opacity="0.5"/>
+<text x="545.0" y="335" class="sans ink" font-size="12">Python</text>
+<text x="658.0" y="335" class="sans muted" font-size="12" text-anchor="end">15%</text>
+<circle cx="681.5" cy="295" r="3.5" fill="#e6edf3" fill-opacity="0.34"/>
+<text x="691.0" y="299" class="sans ink" font-size="12">Go</text>
+<text x="804.0" y="299" class="sans muted" font-size="12" text-anchor="end">6%</text>
+<circle cx="681.5" cy="313" r="3.5" fill="#e6edf3" fill-opacity="0.22"/>
+<text x="691.0" y="317" class="sans ink" font-size="12">Shell</text>
+<text x="804.0" y="317" class="sans muted" font-size="12" text-anchor="end">2%</text>
+<circle cx="681.5" cy="331" r="3.5" fill="#e6edf3" fill-opacity="0.12"/>
+<text x="691.0" y="335" class="sans ink" font-size="12">Other</text>
+<text x="804.0" y="335" class="sans muted" font-size="12" text-anchor="end">1%</text>
+</svg>
