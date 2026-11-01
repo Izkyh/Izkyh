@@ -1,7 +1,4 @@
 <div align="center">
-  <h3>Izkyh</h3>
-  <p><sub>Building <a href="https://racara.id">Racara</a> · quiet, useful things for the web</sub></p>
-  <br>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/stats-dark.svg">
     <img alt="GitHub stats" src="./assets/stats-light.svg" width="100%">
