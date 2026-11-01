@@ -29,12 +29,14 @@ jobs:
 
       - name: Generate card
         env:
-          # Opsional: buat secret STATS_TOKEN (PAT, scope read:user + repo)
-          # agar commit di repo privat ikut terhitung.
+          # Buat secret STATS_TOKEN (PAT classic, scope: repo + read:user + read:org)
+          # agar repo privat & kolaborasi ikut dihitung (hanya angka, tanpa nama repo).
           GH_TOKEN: ${{ secrets.STATS_TOKEN || secrets.GITHUB_TOKEN }}
           GH_LOGIN: ${{ github.repository_owner }}
           STATS_TZ: Asia/Jakarta
           STATS_LANG: en            # en | id
+          STATS_TAGLINE: "Building Racara · quiet, useful things for the web"
+          STATS_PRIVATE_LANGS: "true" # "false" = bahasa repo privat tidak ditampilkan
           STATS_HIDE_LANGS: ""      # contoh: "HTML,CSS"
         run: python scripts/generate_stats.py
 
